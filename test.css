@@ -1,0 +1,195 @@
+
+   
+  /* Estilos Gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8; /* Cor de fundo clara */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garantir que o body ocupe 100% da altura */
+}
+
+/* Cabeçalho */
+header {
+    background-color: #4CAF50; /* Cor verde do cabeçalho */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Barra de Navegação Superior */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Estilo para as Seções */
+section {
+    padding: 40px;
+    text-align: center;
+}
+
+h2 {
+    color: #9C27B0; /* Cor roxa para os subtítulos */
+}
+
+p {
+    color: #333; /* Cor cinza para o texto */
+}
+
+/* Formulário de Contato */
+form {
+    max-width: 400px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #E91E63; /* Cor de fundo do botão */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #d81b60; /* Cor do botão ao passar o mouse */
+}
+
+/* Rodapé */
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    margin-top: auto; /* Faz o rodapé ir para o final da página */
+}
+
+/* Barra de Navegação Lateral */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100vh;
+    background-color: #3B8C3A; /* Verde forte */
+    padding-top: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li {
+    padding: 15px;
+    text-align: center;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+}
+
+.sidebar a:hover {
+    background-color: #2E6C2C; /* Tom mais escuro ao passar o mouse */
+}
+
+/* Ajustando o Banner para a Lateral */
+.banner {
+    margin-left: 200px; /* Deixa o banner à direita do menu lateral */
+    width: calc(100% - 200px); /* Ajusta a largura do banner */
+    height: 250px;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Ajustando o Conteúdo Principal */
+section {
+    margin-left: 200px; /* Deixa o conteúdo à direita do menu lateral */
+    padding: 20px;
+}
+
+/* Seção de Destaques */
+.destaques {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.destaques h2 {
+    color: #9C27B0;
+}
+
+.livros {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.livro img {
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.livro h3 {
+    color: #E91E63;
+}
+
+/* Seção de Benefícios */
+.beneficios {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.beneficios h2 {
+    color: #9C27B0;
+}
+
+.beneficios ul {
+    list-style: none;
+    padding: 0;
+}
+
+.beneficios li {
+    margin: 10px 0;
+    color: #333;
+    font-size: 18px;
+}
