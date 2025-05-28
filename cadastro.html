@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+    <nav class="sidebar">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="quem somos.html">Quem Somos</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="cadastro.html">Cadastro</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h1>Formulário de Cadastro</h1>
+        <form id="formCadastro">
+            <input type="text" name="nome" placeholder="Nome completo" required>
+            <input type="text" name="cpf" placeholder="CPF" required>
+            <input type="date" name="dataNascimento" required>
+            <input type="email" name="email" placeholder="E-mail" required>
+            <input type="tel" name="telefone" placeholder="Telefone" required>
+            <input type="text" name="cep" id="cep" placeholder="CEP" required>
+            <input type="text" name="endereco" id="endereco" placeholder="Endereço" readonly>
+            <select name="deficiencia" required>
+                <option value="">Possui algum tipo de deficiência?</option>
+                <option value="nenhuma">Nenhuma</option>
+                <option value="visual">Visual</option>
+                <option value="auditiva">Auditiva</option>
+                <option value="motora">Motora</option>
+                <option value="intelectual">Intelectual</option>
+                <option value="outra">Outra</option>
+            </select>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        Todos os direitos reservados: Julia Uema<br>
+        Orientador: Professor Kleber
+    </footer>
+
+    <script>
+        // Integração com ViaCEP
+        document.getElementById('cep').addEventListener('blur', function () {
+            const cep = this.value.replace(/\D/g, '');
+            if (cep.length === 8) {
+                fetch(`https://viacep.com.br/ws/${cep}/json/`)
+                    .then(res => res.json())
+                    .then(data => {
+                        if (!data.erro) {
+                            document.getElementById('endereco').value =
+                                `${data.logradouro}, ${data.bairro}, ${data.localidade} - ${data.uf}`;
+                        } else {
+                            alert('CEP não encontrado!');
+                        }
+                    });
+            }
+        });
+    </script>
+</body>
+</html>
